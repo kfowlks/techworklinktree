@@ -23,6 +23,26 @@
         <meta property="og:description" content="Tech Writing Portfolio" />
         <meta property="og:url" content="https://tech-writer.netlify.app/" />
         <meta property="og:type" content="website">
+         <script type="text/javascript">
+             function createITSDLink()
+                {
+                  /* Get the text field */
+                  var itsdNum = document.getElementById("itsd_num");
+                  var ref = "https://itservicedesk.msu.edu/CAisd/pdmweb.exe?OP=SEARCH+FACTORY=chg+SKIPLIST=1+QBE.EQ.chg_ref_num=" + itsdNum.value;
+
+                  /* Select the text field */
+
+                  itsdNum.value = ref
+                  itsdNum.select();
+                  itsdNum.setSelectionRange(0, 99999); /* For mobile devices */
+
+                  /* Copy the text inside the text field */
+                  document.execCommand("copy");
+
+                  /* Alert the copied text */
+                  alert("Copied the text: " + itsdNum.value);
+                }
+        </script>
     </head>
     <body>
         <!-- Profile picture-->
@@ -45,7 +65,9 @@
        <a href="https://nexus.itservices.msu.edu/" target="_blank" class="links">Nexus</a>
        <a href="http://uss.itservicedesk.msu.edu/" target="_blank" class="links">Service Request Tickets</a>
        <a href="http://itservicedesk.msu.edu/" target="_blank" class="links">IT Service Desk Tickets</a>
-       <a href="#" target="_blank" class="links">https://itservicedesk.msu.edu/CAisd/pdmweb.exe?OP=SEARCH+FACTORY=chg+SKIPLIST=1+QBE.EQ.chg_ref_num=[ticket number]</a>
+         <input type="text" placeholder="itsd number"  id="itsd_num" >
+         <input type="button" value="Go" onclick="createITSDLink();" >
+       
 
        <h2 class="header">✨ SAP Portal Environments ✨</h2>
        <a href="https://secportal.ebsp.msu.edu/" target="_blank" class="links">SAP Portal Prod</a>
