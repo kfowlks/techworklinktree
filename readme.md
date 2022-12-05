@@ -2,6 +2,8 @@
 
 Just need static location to place all of my tech links with headings
 
+Link to hosting https://techworklinktree.onrender.com/
+
 ## Getting started 
 - fork this repo and clone it
 - in the `index.html` file change: 
